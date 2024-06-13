@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse Engineering the iPod Shuffle 3G Remote Protocol</title>
+</head>
+<body>
+    <h1>Reverse Engineering the iPod Shuffle 3G Remote Protocol</h1>
+    
+    <h2>Introduction</h2>
+    <p>This page details the reverse engineering process of the iPod Shuffle 3rd generation's headphone remote protocol.</p>
+    
+    <h2>Disassembly</h2>
+    <p>The first step was to disassemble the original remote to understand its construction and components.</p>
+    <img src="images/disassembly.jpg" alt="Disassembly Process">
+    
+    <h2>Signal Investigation</h2>
+    <p>Through experimentation, it was determined that specific resistor values correspond to different remote commands.</p>
+    
+    <h2>Resistor Values for Buttons</h2>
+    <ul>
+        <li>Play/Pause: 220 ohms</li>
+        <li>Next Track: 150 ohms</li>
+        <li>Previous Track: 360 ohms</li>
+        <li>Volume Up: 430 ohms</li>
+        <li>Volume Down: 820 ohms</li>
+    </ul>
+    <img src="images/resistor_values.jpg" alt="Resistor Values">
+    
+    <h2>Authentication Signal</h2>
+    <p>Power-on authentication involves ultrasonic chirps.</p>
+    
+    <h2>Emulation</h2>
+    <p>Successfully emulated using an ATmega88 microcontroller.</p>
+    <img src="images/emulation.jpg" alt="Emulation Process">
+    
+    <h2>Future Development</h2>
+    <p>The author plans to develop a low-power replacement for the original remote.</p>
+    
+    <h2>Original Source</h2>
+    <p>For detailed instructions and the complete guide, visit the <a href="https://web.archive.org/web/20211018015853/http://david.carne.ca/shuffle_hax/shuffle_remote.html">original page</a>.</p>
+</body>
+</html>
